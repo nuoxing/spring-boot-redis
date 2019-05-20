@@ -14,7 +14,7 @@ import com.work.util.RedisUtil;
 
 import redis.clients.jedis.JedisPoolConfig;
 
-@Configuration
+//@Configuration
 @PropertySource("classpath:config/redis.properties")
 public class RedisConfig {
 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>520</title>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+	  $(function (){
+		 
+		  
+		  var audio = document.getElementById("audio");
+		  audio.addEventListener("loadeddata", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
+			        function() {
+			  setTimeout(function(){
+				  $(".start").hide();
+				  start();
+			 		  },5000);
+			
+		   }, false);
+		  
+	  });
+		  
+		  
+		  function start(){
+			
+			  setTimeout(function(){
+				 
+			 	  $(".number3").hide();
+			 	
+			 	  $(".number2").addClass("honghua1");
+			 	  $(".number2").show();
+			 		  },3000);
+			  
+			  setTimeout(function(){
+			 	  $(".number2").hide();
+			 	  $(".number1").addClass("honghua1");
+			 	  $(".number1").show();
+			 		  
+			  },5000);
+			  
+			  setTimeout(function(){
+			 	  $(".number1").hide();
+			 	  $(".wenzi1").addClass("honghua2");
+			 	  $(".wenzi1").show();
+			  },7000);
+			  
+			  
+			  setTimeout(function(){
+			 	  $(".wenzi1").hide();
+			 	  $(".wenzi2").addClass("honghua2");
+			 	  $(".wenzi2").show();
+			  },9000);
+			  
+			  setTimeout(function(){
+			 	  $(".wenzi2").hide();
+			 	  $(".wenzi3").addClass("honghua2");
+			 	  $(".wenzi3").show();
+			 },11000);
+			  
+			  setTimeout(function(){
+			 	  $(".wenzi3").hide();
+			 	  $(".img1").addClass("honghua3");
+			 	  $(".img1").show();
+			 },13000);
+			  setTimeout(function(){
+			 	  $(".img1").hide();
+			 	  $(".img2").addClass("honghua3");
+			 	  $(".img2").show();
+			 	 
+			 },15000);	
+			     
+			  setTimeout(function(){
+			 	  $(".wenzi1").show();
+			 	  $(".wenzi2").show();
+			 	  $(".wenzi3").show();
+			 	 
+			 },17000);
+		  }
+</script>
+
+<style type="text/css">
+.font1 {
+	font-size: 0px;
+}
+
+.font2 {
+	font-size: 0px;
+	color: red
+}
+
+@keyframes myfirst {
+	from {font-size: 0px;
+}
+
+to {
+	font-size: 200px;
+}
+
+}
+@-webkit-keyframes myfirst /* Safari 与 Chrome */ {
+	from {font-size: 0px;
+}
+
+to {
+	font-size: 200px;
+}
+
+}
+
+
+@-webkit-keyframes spin {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    font-size: 0px;
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                     font-size: 200px;
+                }
+            }
+            
+            @keyframes spin {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    font-size: 0px;
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                     font-size: 200px;
+                }
+            }
+            
+            
+           @keyframes myfirst2 {
+	from {width: 0px; height: 0px;
+}
+
+to {
+	width: 400px; height: 400px;
+}
+
+}
+@-webkit-keyframes myfirst2 /* Safari 与 Chrome */ {
+	from {width: 0px; height: 0px;
+}
+
+to {
+	width: 400px; height: 400px;
+}
+
+}
+
+.honghua1 {
+	animation: myfirst 3s;
+	-webkit-animation: myfirst 3s; /* Safari and Chrome */
+	animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards; /* Safari 和 Chrome */
+}
+
+.honghua2{
+animation: spin 3s;
+	-webkit-animation: spin 3s; /* Safari and Chrome */
+	animation-fill-mode:forwards;
+-webkit-animation-fill-mode:forwards; /* Safari 和 Chrome */
+}
+
+.honghua3{
+animation: myfirst2 3s;
+	-webkit-animation: myfirst2 3s; /* Safari and Chrome */
+	animation-fill-mode:forwards;
+-webkit-animation-fill-mode:forwards; /* Safari 和 Chrome */
+}
+
+
+</style>
+
+</head>
+<body>
+	<div style="text-align: center; margin-top: 400px">
+<div class="number  start  "
+			style="width: 200px; height: 200px;  font-size:200px;margin: 0 auto;">准备开始</div>
+			
+		<div class="number number3 font1  "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">3</div>
+		<div class="number number2 font1 "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">
+			<span>2</span>
+		</div>
+		<div class="number number1 font1 "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">
+			<span>1</span>
+		</div>
+
+		<div class="font2  wenzi1 "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">
+			<span>XX</span>
+		</div>
+		<div class="font2 wenzi2 "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">
+			<span>XX</span>
+		</div>
+		<div class="font2 wenzi3 "
+			style="width: 200px; height: 200px; margin: 0 auto;display:none;">
+			<span>XXX</span>
+		</div>
+		<div>
+			<img alt="" src="2.jpg" style="width: 0px; height: 0px;display:none;" class="honghua3 img1">
+		</div>
+		<div>
+			<img alt="" src="1.jpg" style="width: 0px; height: 0px;display:none;" class="honghua3 img2">
+		</div>
+
+	</div>
+	
+<audio id="audio" controls="controls" style="display:none;"  autoplay="autoplay" src="a.mp3">
+
+</audio>
+</body>
+</html>

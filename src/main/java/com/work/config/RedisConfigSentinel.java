@@ -19,7 +19,7 @@ import com.work.util.RedisUtil;
 
 import redis.clients.jedis.JedisPoolConfig;
 
-@Configuration
+//@Configuration
 @PropertySource("classpath:config/redis.properties")
 public class RedisConfigSentinel {
 
@@ -90,13 +90,13 @@ public class RedisConfigSentinel {
     public RedisSentinelConfiguration sentinelConfiguration(){
         RedisSentinelConfiguration redisSentinelConfiguration = new RedisSentinelConfiguration();
         //配置matser的名称
-        RedisNode redisNode = new RedisNode(hostName, port);
-        redisNode.setName("mymaster");
-        redisSentinelConfiguration.master(redisNode);
+       // RedisNode redisNode = new RedisNode(hostName, port);
+       // redisNode.setName("mymaster");
+       // redisSentinelConfiguration.master(redisNode);
         //配置redis的哨兵sentinel
-        RedisNode senRedisNode = new RedisNode(senHost1,senPort1);
+       // RedisNode senRedisNode = new RedisNode(senHost1,senPort1);
         Set<RedisNode> redisNodeSet = new HashSet<>();
-        redisNodeSet.add(senRedisNode);
+       // redisNodeSet.add(senRedisNode);
         redisSentinelConfiguration.setSentinels(redisNodeSet);
         return redisSentinelConfiguration;
     }
